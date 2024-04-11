@@ -1,39 +1,40 @@
 /* eslint-disable */
-export default class Currency{
-    constructor(code, name){
-        if (code.constructor !== String) {
-            throw new TypeError('Code must be a string');
-        }
-        this._code = code
-        if (name.constructor !== String) {
-             throw new TypeError('Name must be a string');
-        }
-        this._name = name
+export default class Currency {
+  constructor(code, name) {
+    if (code.constructor !== String) {
+      throw new TypeError('Code must be a string');
     }
-    
-    get code(){
-        return this._code
-        }
-    
-    set code(){
-        if (code.constructor !== String){
-            throw new TypError('Code must be a string')
-        }
-        this._code = code
-    }
+    this._code = code;
 
-    get name(){
-        return this._name
+    if (name.constructor !== String) {
+      throw new TypeError('Name must be a string');
     }
+    this._name = name;
+  }
 
-    set name(){
-        if (name.constructor !== String){
-            throw new TypError('Name must be a string')
-        }
-        this._name = name
+  get name() {
+    return this._name;
+  }
+
+  set name(name) {
+    if (name.constructor !== String) {
+      throw new TypeError('Name must be a string');
     }
-    
-    export default function displayFullCurrency(this){
-        return `${this._name} (${this._code})`
+    this._name = name;
+  }
+
+  get code() {
+    return this._code;
+  }
+
+  set code(code) {
+    if (code.constructor !== String) {
+      throw new TypeError('Code must be a string');
     }
+    this._code = code;
+  }
+
+  displayFullCurrency() {
+    return (`${this._name} (${this._code})`);
+  }
 }
