@@ -1,4 +1,4 @@
-/* eslint -disable */
+/* eslint-disable */
 export default class HolbertonCourse {
   constructor(name, length, students) {
     if (name.constructor !== String) {
